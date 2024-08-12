@@ -121,3 +121,29 @@ h4 {
 .text-right {
 	text-align: right;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        height: auto;
+        box-shadow: inset 200px 0 50px rgba(0, 0, 0, .5), 15px 0 50px rgba(0, 0, 0, .5);
+    }
+    .card .details p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 95%;
+        height: auto;
+    }
+    .card .details p {
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    .text-right {
+        margin-right: 10px;
+    }
+}
