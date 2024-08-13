@@ -9,40 +9,63 @@ body {
     height: 100vh;
 }
 
-h4 {
-    font-size: 26px;
-    line-height: 1px;
-    font-family: 'Great Vibes', cursive !important;
-}
-
-.color1 { color: #1BBC9B; }
-.color2 { color: #59a37c; }
-
 .card {
-    color: #013243;
-    position: relative;
-    width: 350px;
-    height: 450px;
-    background: #e0e1dc;
-    transform-style: preserve-3d;
-    transform: perspective(2000px);
-    box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 20px 0 60px rgba(0, 0, 0, .5);
-    transition: 1s;
-    cursor: pointer;
     touch-action: manipulation;
-    transform: perspective(1000px);
+    transform: perspective(1500px);
+    width: 350px; /* Width of the card */
+    height: 450px; /* Height of the card */
+    position: relative;
 }
 
-.card.open {
-    transform: perspective(1000px) rotateY(-180deg); /* Adjust as needed */
-    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+/* Container for 3D flip effect */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.7s;
+    transform-origin: center; /* Rotate from center */
+  }
+  
+  .card.open .card-inner {
+    transform: rotateY(-180deg); /* Rotate the card to show the back */
 }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back side when not visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-front {
+    background: #e0e1dc;
+    color: #013243;
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 20px 0 60px rgba(0, 0, 0, .5);
+    transform: rotateY(0deg); /* Front face orientation */
+    z-index: 2; /* Keep front face above the back face */
+  }
+  
+  .card-back {
+    background: #e0e1dc;
+    color: #013243;
+    transform: rotateY(180deg); /* Rotates the back side to be hidden initially */
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+    z-index: 1; /* Keep back face below the front face */
+
+  }
+
+  
 .card .imgBox {
     width: 100%;
     height: 100%;
-    position: relative;
-    transform-origin: left;
-    transition: .7s;
+    overflow: hidden; /* Ensure that the image does not overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensures the image covers the area without distortion */
 }
 
 .card .bark {
@@ -59,23 +82,27 @@ h4 {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    object-fit: cover; /* Ensure the image covers the entire area */
 }
 
 .card .details {
-    position: absolute;
     font-family: 'Great Vibes', cursive;
-    top: 0;
-    left: 0;
     box-sizing: border-box;
-    padding: 10px;
-    z-index: -1;
-    margin-top: 70px;
+    padding: 20px;
+    text-align: center; /* Center-aligns all text for a unified look */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Arrange text in a column */
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure it occupies the full height */
 }
 
 .card .details p {
     font-size: 18px;
     line-height: 1.6;
-    padding: 0 10px; /* Adjust as needed */
+    margin: 0; /* Remove margin to avoid gaps between paragraphs */
+    padding: 0; /* Remove padding to avoid extra space */
 }
 
 .card .details h4 {
@@ -84,7 +111,8 @@ h4 {
 
 .text-right {
     text-align: right;
-    margin-right: 20px;
+    margin: 0; /* Remove margin for consistency */
+
 }
 
 @media (max-width: 768px) {
@@ -105,4 +133,7 @@ h4 {
     .card .details p {
         font-size: 14px;
     }
+    .text-right {
+        margin-right: 10px;
+      }
 }

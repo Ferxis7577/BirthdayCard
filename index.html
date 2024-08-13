@@ -1,35 +1,42 @@
 <!DOCTYPE html>
-<html lang="es" >
+<html lang="es">
 <head>
-  
   <meta charset="UTF-8">
-  <title> Happy birthday Nelly</title>
+  <title>Happy Birthday Nelly</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
   <link rel="stylesheet" href="./style.css">
-
 </head>
 <body>
-
-<div class="card">
-		<div class="imgBox">
-			<div class="bark"></div>
-			<img src="birthdaycard.jpg">
-		</div>
-		<div class="details">
-			<p>¡Feliz cumpleaños!, quiero que sepas que siempre estás </p>
-			<p>presente y te valoro muchísimo.</p>
-			<p>Espero que este nuevo año de vida te traiga todo lo que </p>
-			<p>mereces: salud, felicidad y éxitos. </p>
-			<p>Te envío todo mi cariño y los mejores deseos </p>
-			<p>a través de esta carta.</p>
-			<p>Recuerda siempre lo especial e increíble que eres.</p>	
-			<p>Disfruta de tu día al máximo, rodéate de amor y</p>
-			<p>celebra como te mereces.</p>	
-			<p>Con mucho cariño!</p>
-			<p class="text-right">Felices 21</p>
-			<p class="text-right">Nelly♡</p>
-		</div>
-	</div>
-	<script src="./script.js"></script>
+  <!-- Card Container -->
+  <div class="card" onclick="toggleCard()">
+    <!-- Card Inner Container for 3D Flip Effect -->
+    <div class="card-inner">
+      <!-- Front of the Card -->
+      <div class="card-front">
+        <div class="imgBox">
+          <div class="bark"></div>
+          <img src="birthdaycard.jpg" alt="Birthday Card Image">
+        </div>
+      </div>
+      <!-- Back of the Card (Details) -->
+      <div class="card-back">
+        <div class="details">
+          <p>¡Feliz cumpleaños!, quiero que sepas que siempre estás </p>
+          <p>presente y te valoro muchísimo.</p>
+          <p>Espero que este nuevo año de vida te traiga todo lo que </p>
+          <p>mereces: salud, felicidad y éxitos. </p>
+          <p>Te envío todo mi cariño y los mejores deseos </p>
+          <p>a través de esta carta.</p>
+          <p>Recuerda siempre lo especial e increíble que eres.</p>  
+          <p>Disfruta de tu día al máximo, rodéate de amor y</p>
+          <p>celebra como te mereces.</p>  
+          <p>Con mucho cariño!</p>
+          <p class="text-right">Felices 21</p>
+          <p class="text-right">Nelly♡</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
 </body>
 </html>

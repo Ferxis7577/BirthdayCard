@@ -1,3 +1,3 @@
-document.querySelector('.card').addEventListener('pointerdown', function() {
-    this.classList.toggle('open');
-});
+function toggleCard() {
+    document.querySelector('.card').classList.toggle('open');
+  }
