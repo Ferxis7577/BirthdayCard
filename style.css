@@ -119,6 +119,7 @@ body {
 @media (max-width: 768px) {
     .card {
         width: 90%;
+        zoom:1.5;
         height: auto;
     }
     .card .details p {
@@ -129,6 +130,7 @@ body {
 @media (max-width: 480px) {
     .card {
         width: 95%;
+        zoom:1.5;
         height: auto;
     }
     .card .details p {
