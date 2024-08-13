@@ -1,4 +1,4 @@
-document.getElementById('birthdayCard').addEventListener('touchstart', function(event) {
+document.getElementById('birthdayCard').addEventListener('touchend', function(event) {
     event.preventDefault();
     this.classList.toggle('open');
 }, false);
