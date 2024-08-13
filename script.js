@@ -1,9 +1,7 @@
-document.getElementById('card').addEventListener('touchend', function(event) {
-    event.preventDefault();
-    this.classList.toggle('open');
-}, false);
+document.querySelector('.card').addEventListener('click', function() {
+    this.classList.toggle('is-flipped');
+});
 
-document.getElementById('card').addEventListener('click', function(event) {
-    event.preventDefault();
-    this.classList.toggle('open');
+document.querySelector('.card').addEventListener('touchstart', function() {
+    this.classList.toggle('is-flipped');
 });
