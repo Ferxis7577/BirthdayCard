@@ -15,7 +15,7 @@ body {
     width: 350px; /* Width of the card */
     height: 450px; /* Height of the card */
     position: relative;
-    zoom:1.5;
+    zoom:2.0;
 }
 
 /* Container for 3D flip effect */
