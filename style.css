@@ -50,7 +50,7 @@ body {
   }
   
   .card-back {
-    background: #e0e1dc;
+    background: #eeeeee;
     color: #013243;
     transform: rotateY(180deg); /* Rotates the back side to be hidden initially */
     box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
